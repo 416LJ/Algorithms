@@ -222,15 +222,15 @@ class BST {
   bst.add(7);
   bst.add(20);
   
-  console.log(bst.findMinHeight());
-  console.log(bst.findMaxHeight());
-  console.log(bst.isBalanced());
+  console.log("min height : "+bst.findMinHeight());
+  console.log("max height : "+bst.findMaxHeight());
+  console.log("is balanced : "+bst.isBalanced());
   bst.add(10);
-  console.log(bst.findMinHeight());
-  console.log(bst.findMaxHeight());
-  console.log(bst.isBalanced());
+  console.log("min height : "+bst.findMinHeight());
+  console.log("max height : "+bst.findMaxHeight());
+  console.log("is balanced : "+bst.isBalanced());
   console.log('inOrder: ' + bst.inOrder());
   console.log('preOrder: ' + bst.preOrder());
   console.log('postOrder: ' + bst.postOrder());
-  
+  console.log("is present : "+ bst.isPresent(20));
   console.log('levelOrder: ' + bst.levelOrder());
