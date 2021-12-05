@@ -1,0 +1,62 @@
+------insertion-------
+
+for (var i = 1; i < array.length; i++) {
+    for (var j = i; j > 0; j--) {
+        if(array[j] < array[j-1]){
+            console.log(`swapping : ${array[j]} and ${array[j-1]}`)
+            swap(j);
+            
+        }else{
+            break;
+        }
+    }   
+}
+
+console.log(array);
+function swap(j){
+    temp = array[j];
+    array[j] = array[j-1];
+    array[j-1] = temp;
+}
+
+
+------bubble--------
+
+for (let i = 0; i < array.length-1; i++) {
+    for (let j = i+1; j < array.length; j++) {
+        if(array[j] < array[i]){
+            console.log(`swapping ${array[i]} and ${array[j]}`);
+            swap(i,j);
+        }
+        
+    }    
+}
+console.log(array)
+function swap(i,j){
+    temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+}
+
+-------selection-----
+
+for (var i = 0; i < array.length-1; i++) {
+    var min = i;
+    for (var j = i +1; j < array.length; j++) {
+        console.log(`comparing ${array[min]} and ${array[j]}`)
+        if (array[j] < array[min]) {
+            min = j;
+            console.log(`set new min number from ${array[i]} to ${array[j]}`)
+        
+        }
+    }
+    swap(i,j);
+    console.log(`swapping ${array[i]} and ${array[min]}`);
+    
+}
+console.log(array)
+function swap(i,j){
+    temp = array[i];
+    array[i] = array[min];
+    array[min] = temp;
+}
